@@ -1,0 +1,30 @@
+$light: #fff;
+$gray: #9599a3;
+
+
+.navbar{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    background-color: $light;
+    align-items: center;
+    height: 120px;
+    border-bottom: 0px solid $gray;
+    margin: 0px;
+}
+
+.navbar{
+    box-shadow: 4px 4px 10px #e0dada, -4px -4px 10px #fff;
+
+}
+
+.img-content{
+        margin-right: 100px;
+        margin-left: 25px;
+}
+
+
+
+
+
+
