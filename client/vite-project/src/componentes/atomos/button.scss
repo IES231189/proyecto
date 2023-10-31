@@ -1,13 +1,6 @@
+$color: #EBEBEB;
 
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-  }
-
-  $color: #EBEBEB;
-
- .boton {
+.boton {
     background-color: $color;
     padding: 6px 70px; /* Corregido para especificar el padding en formato "arriba/derecha/abajo/izquierda" */
     color: #000;
@@ -18,4 +11,4 @@
     border: 0px;
     border-radius: 40px;
     box-shadow: 4px 4px 10px #e0dada;
- }   
+}   

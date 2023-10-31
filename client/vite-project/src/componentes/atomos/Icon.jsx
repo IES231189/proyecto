@@ -4,7 +4,7 @@ import React from 'react';
 const Icon = ({icon, text}) =>{
         return(
 
-            <div className="sidebar-icon">
+            <div className="sidebar-icon ">
                     <div className='container-icon'>
                     <i className={`material-icons`}>{icon}</i>
                     </div> 

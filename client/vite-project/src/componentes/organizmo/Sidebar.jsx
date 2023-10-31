@@ -1,12 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router,Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import SidebarItem from "../moleculas/SidebarItem";
 
+
 const Sidebar = () =>{
+       
         const iconos=[
 
                 {
-                  icon:"dashboard",
+                 icon:"dashboard",
                   text:"Calendario",
                   ruta:"/calendario",
                 },
@@ -27,27 +29,29 @@ const Sidebar = () =>{
                   ruta: "/hospitalizacion",                 
                 },
                 {
-                   icon:"person",
+                   icon:"perm_identity",
                    text:"Pacientes",     
                    ruta: "/pacientes",
-                }
+                },
         ];
 
     return(
-            <div className="sidebar">
-                     {iconos.map(icono=> (
-                        <Router>
-                                <Link to={icono.ruta}>
-                                <SidebarItem icon={icono.icon} text={icono.text}/>
-                        </Link>
-                        </Router>
+
+        <div>
+            <div className="sidebar col-4">
+            
+                     {iconos.map((icono , index) => (
                         
-                       
-                     ))};    
+                                <NavLink  to={icono.ruta} key={index} >
+                                        <SidebarItem icon={icono.icon} text={icono.text} />
+                                </NavLink>             
+                     ))}; 
+              
             </div>
+
+        </div>
     );
+
 };
-
-
 
 export default Sidebar;

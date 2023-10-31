@@ -4,11 +4,13 @@ $gray: #9599a3;
 
 .navbar{
     display: flex;
+    flex-direction: row;
     width: 100%;
     flex-direction: row;
     background-color: $light;
     align-items: center;
-    height: 120px;
+   
+    height: 130px;
     border-bottom: 0px solid $gray;
     margin: 0px;
 }
@@ -19,8 +21,8 @@ $gray: #9599a3;
 }
 
 .img-content{
-        margin-right: 100px;
-        margin-left: 25px;
+        margin-right: 90px;
+        margin-left: 65px;
 }
 
 

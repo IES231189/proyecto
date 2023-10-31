@@ -7,19 +7,22 @@
 
 .sidebar-icon{
   width: 200px;
+  height: 100%;
   background-color: #00B9D7;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   text-align: center;
-  padding: 20px;
-  border-right: 1px solid gray;
+  padding: 17px;
+ 
 }
 
 .container-icon{
-  padding-right: 20px;
-  font-size: 18px;
-
+ width: 100%; 
+ padding-right: 20px;
+ font-size: 20px;
+ text-align: center;
+ 
 }
 
 .container-icon i{
@@ -40,6 +43,17 @@
 .sidebar a.active {
   border: none;
   outline: none;
-  
+  background-color: black;
 }
 
+.sidebar .col-1{
+  width:100px;
+  margin: 40px;
+}
+
+.col-11 table{
+  display: block;
+  float: inline-start;
+  text-align: center;
+
+}
