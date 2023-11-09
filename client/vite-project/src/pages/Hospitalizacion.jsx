@@ -1,20 +1,24 @@
 import React from "react";
 import Table from "../componentes/organizmo/Table";
 import Button from "../componentes/atomos/button";
+import { Link } from "react-router-dom";
 
 
 const Hospitalizacion=()=>{
-    const name="Hospitalizacion";
+    const name="Hospitalización";
     const botonName="Agregar Paciente";
+
     const data = [
-        { name: '', hours: 0, city: '', phone: '' }, 
+        { name: '', hours: 0 , city: '', phone: '' }, 
       
-      ];
+    ];
 
     return(
-        <div className="col-8">
+        <div className="col-10">
+           <Link to='/formulario-hospitalizacion'>
            <Button name={botonName} ></Button>
-           <Table row={data} name={name}></Table>
+           </Link> 
+           <Table data={data} name={name}></Table>
         </div>
         
     );

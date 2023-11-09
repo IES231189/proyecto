@@ -1,9 +1,16 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import SidebarItem from "../moleculas/SidebarItem";
+import { useState } from "react";
 
+const Sidebar = ({ currentRoute }) =>{
+  
+  const [activeIcon, setActiveIcon] = useState(null);
 
-const Sidebar = () =>{
+  const handleNavLinkClick = (ruta, index) => {
+    setActiveIcon(index);
+  };
+
        
         const iconos=[
 
@@ -25,7 +32,7 @@ const Sidebar = () =>{
                 },
                 {
                   icon:"monitor_heart",
-                  text:"Hospitalizacion",
+                  text:"Hospitalización",
                   ruta: "/hospitalizacion",                 
                 },
                 {
@@ -38,13 +45,15 @@ const Sidebar = () =>{
     return(
 
         <div>
-            <div className="sidebar col-4">
+            <div className="sidebar col-1">
             
                      {iconos.map((icono , index) => (
-                        
-                                <NavLink  to={icono.ruta} key={index} >
-                                        <SidebarItem icon={icono.icon} text={icono.text} />
-                                </NavLink>             
+                       
+                        <Link to={icono.ruta} key={index}   className={icono.ruta === currentRoute ? "active" : "" }
+                                                       onClick={() => handleNavLinkClick(icono.ruta, index)} >
+                                        <SidebarItem icon={icono.icon} text={icono.text}  isActive={index === activeIcon} />
+                                </Link>   
+                      
                      ))}; 
               
             </div>

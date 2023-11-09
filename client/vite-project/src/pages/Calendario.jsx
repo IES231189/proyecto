@@ -2,7 +2,7 @@ import React from "react";
 
 const Calendario =()=>{
     return (
-        <div className="col-8 ">
+        <div className="col-10 ">
              <p>
             Calendariooooo
         </p>

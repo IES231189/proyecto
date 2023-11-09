@@ -1,28 +1,25 @@
 import React from "react";
 import Table from "../componentes/organizmo/Table";
 import Button from "../componentes/atomos/button";
+import { Link } from "react-router-dom";
 
 
 const Citasgenerales=()=>{
     const nombre="Agregar Paciente";
-    const Pacientes="Pacientes";
-    const columns = [
-      { title: 'Nombre', field: 'name' },
-      { title:'Apellido' , File:'lastname'},
-      { title: 'Hora', field: 'hours' },
-      { title: 'Fecha', field: 'city' },
-      { title: 'Telefono', field: 'phone' },
-    ];
+    const Pacientes="Citas generales";
+   
   
     const data = [
-      { name: '', hours: 0, city: '', phone: '' }, 
-    
-    ];
+      { name: '', hours: 0, city: '', phone: '' }
+       ];
+
     return ( 
      
-    <div className="col-8 table">
+    <div className="col-10 table">
+       <Link to='/formulario'>
        <Button name={nombre}></Button>
-         <Table columna={columns} row={data} name={Pacientes}></Table>
+       </Link> 
+         <Table  data={data} name={Pacientes}></Table>
 
     </div>);
 }

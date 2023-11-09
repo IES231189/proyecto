@@ -3,17 +3,15 @@ import React from 'react';
 
 const Icon = ({icon, text}) =>{
         return(
-
-            <div className="sidebar-icon ">
-                    <div className='container-icon'>
-                    <i className={`material-icons`}>{icon}</i>
-                    </div> 
-                    <div className='container-icon'>
-                         <span>{text}</span>
-                    </div>           
-                   
-            </div>
-            
+            <div className='siderbar-icon'>
+                       
+                                <div className='container-icon'>
+                                        <i className={`material-icons`}>{icon}</i>
+                                </div> 
+                                <div className='container-icon'>
+                                        <span>{text}</span>
+                                </div>    
+                   </div>
         );   
 }
 

@@ -35,16 +35,16 @@ const columns = [
   return (
     
     <MaterialTable
-     actions={actions}
+      actions={actions}
       title={name}
       columns={columns}
       data={data}
       options={{
         actionsColumnIndex: -1, 
       }}
-      style={{width:'100%', maxHeight:'500px'}}
-    />
+      style={{width:'100%', maxHeight:'500px',border:'1px solid #D0D3D4 '}}
+    /> 
   );
 }
-
+ 
 export default Table;
